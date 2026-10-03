@@ -91,6 +91,25 @@ button:focus-visible, input:focus-visible {
 }
 
 .ghost { margin-left: 6px; }
+.shortcut-hint {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: .76rem;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.7em;
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  background: #0d1014;
+  color: #c7ced6;
+  text-align: center;
+  font: inherit;
+}
+
 .editor { padding: 22px; }
 .section-heading {
   display: flex;
