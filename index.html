@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A tiny game backlog picker for indecisive nights.">
+  <title>Backlog Roulette</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">tiny browser toy</p>
+      <h1>Backlog Roulette</h1>
+      <p class="intro">Dump in the games you keep saying you'll play. Let the browser make the decision.</p>
+    </header>
+
+    <section class="picker" aria-labelledby="picked-title">
+      <p id="picked-title" class="label">tonight's problem</p>
+      <div id="result" class="result" aria-live="polite">Add a few games first.</div>
+      <button id="spin" class="primary" type="button">Pick one</button>
+      <button id="again" class="ghost" type="button" hidden>nah, reroll</button>
+    </section>
+
+    <section class="editor" aria-labelledby="backlog-title">
+      <div class="section-heading">
+        <h2 id="backlog-title">Your backlog</h2>
+        <button id="clear" class="text-button" type="button">clear all</button>
+      </div>
+
+      <form id="game-form">
+        <label class="sr-only" for="game-input">Game title</label>
+        <input id="game-input" name="game" maxlength="80" autocomplete="off" placeholder="e.g. Disco Elysium" required>
+        <button type="submit">Add</button>
+      </form>
+
+      <p id="counter" class="counter">0 games</p>
+      <ul id="game-list" class="game-list" aria-live="polite"></ul>
+    </section>
+
+    <footer>
+      no account · no tracking · your list stays in this browser
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
