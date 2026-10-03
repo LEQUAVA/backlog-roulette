@@ -21,7 +21,7 @@ That's it. No install step.
 
 ## Why this exists
 
-Because I have absolutely spent more time deciding what to play than playing anything.
+Because I have an absolute autistic monkey of a friend who spent more time deciding what to play than playing anything.
 
 This is intentionally small. If a feature makes the picker more useful without turning it into backlog-management software, it probably belongs here.
 
