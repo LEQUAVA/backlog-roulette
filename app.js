@@ -116,4 +116,22 @@ clearButton.addEventListener("click", () => {
   render();
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.repeat) return;
+
+  const target = event.target;
+  const isTyping = target instanceof HTMLElement && (
+    target.matches("input, textarea, select") || target.isContentEditable
+  );
+
+  if (isTyping) return;
+
+  const key = event.key.toLocaleLowerCase();
+  if (key === "p") {
+    pickGame();
+  } else if (key === "r" && games.length > 1 && lastPick) {
+    pickGame();
+  }
+});
+
 render();
